@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //get_bboundry();
-        //get_bboundry_array();
+        //get_bbæoundry();
+        get_bboundry_array();
     }
 
     public void get_bboundry() {
@@ -59,8 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject userData = jsonArray.getJSONObject(i);
                 String lon = userData.getString("long");
                 String lat = userData.getString("lat");
+                Double lonVal = userData.getDouble("long");
+                Double latVal = userData.getDouble("lat");
 
-                Log.v("JSON Reading ", lon + " : " + lat);
+                Log.v("JSON Reading ", lonVal + " : " + latVal);
             }
 
         } catch (JSONException e) {
